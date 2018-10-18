@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title><?=Config::get('site_name')?> <?=__('lng.test2','MR')?></title>
+	
+	<meta name = "viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+	<!-- <link type = "text/css" rel="stylesheet"  media = "screen" href="css/theme.css"> -->
+
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="<?=WEBROOT.DS;?>css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="<?=WEBROOT.DS;?>css/mdb.min.css" rel="stylesheet">
+    
+    <link href="<?=WEBROOT.DS;?>css/theme.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+	<div>
+	
+	<ul class="nav peach-gradient lighten-3 py-4 mb-4 font-weight-bold z-depth-1"> 
+		<li class="nav-item ">
+		
+			<a class="nav-link <?=(App::getRouter()->getController()=='pages')?'active':'';?> white-text" href="<?=WEBROOT.DS?>Pages"><?= __('lng.lbpages','Unknow')?> </a>
+		</li> 
+
+	<li class="nav-item">
+
+		<a class="nav-link <?=(App::getRouter()->getController()=='register')?'active':'';?> white-text" href="<?=WEBROOT.DS?>Register"><?= __('lng.lbregister','Unknow')?> </a>
+			
+	
+	</li> 
+
+ <li class="nav-item dropdown">
+  		<a class="nav-link <?=(App::getRouter()->getController()=='phone')?'active':'';?> white-text dropdown-toggle" data-toggle="dropdown" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?=WEBROOT.DS?>Phone" > <?= __('lng.lbphone','Unknow')?></a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item " href="<?=WEBROOT.DS;?>phone/new"><?= __('lng.lbnew','Unknow')?> </a>
+         <a class="dropdown-item  " href="<?=WEBROOT.DS;?>phone/edit"><?= __('lng.lbedit','Unknow')?> </a>
+          <a class="dropdown-item  " href="<?=WEBROOT.DS;?>phone/view"><?= __('lng.lbview','Unknow')?> </a>
+          <a class="dropdown-item  " href="<?=WEBROOT.DS;?>phone/list"><?= __('lng.lblist','Unknow')?> </a>
+        </div>
+      </li>
+
+
+  </ul>
+       
+    <?=(App::getRouter()->getController());?> 
+
+
+	</div>
+		
+	<div style="height: 100vh">
+        <div class="flex-center flex-column">
+             <!-- <h2 class="animated fadeIn mb-2">HEADER WILL BE HERE</h2>
+
+            <h5 class="animated fadeIn mb-1">Thank you for using our product. We're glad you're with us.</h5>  -->
+
+            <p class="animated fadeIn text-muted"><?=$data['content']?></p>
+
+            
+        </div>
+        <span><?=__('lng.test', 'default value')?></span>
+    </div>
+
+
+	<script  type="text/javascript" src="<?=WEBROOT.DS;?>js/jquery-3.3.1.min.js"></script>
+
+	<script  type="text/javascript" src="<?=WEBROOT.DS;?>js/popper.min.js"></script>
+
+	<script  type="text/javascript" src="<?=WEBROOT.DS;?>js/bootstrap.min.js"></script>
+
+	<script  type="text/javascript" src="<?=WEBROOT.DS;?>js/mdb.min.js"></script>
+
+
+	
+</body>
+</html>
